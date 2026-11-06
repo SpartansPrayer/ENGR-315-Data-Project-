@@ -4,7 +4,7 @@
 - [x] Document project objective, selected questions, methods, metrics, tools, plots, hypotheses, significance level, and limitations.
 - [x] Add reproducible setup/run instructions.
 - [x] Create remote GitHub repository and invite all teammates.
-- [ ] Submit repository URL to Canvas.
+- [x] Submit repository URL to Canvas.
 
 ## Phase 2 — Initial implementation and analysis
 - [x] Build a reusable Python analysis script.

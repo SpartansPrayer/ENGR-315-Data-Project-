@@ -181,9 +181,9 @@ The script creates CSV tables in `outputs/tables/` and PNG figures in `outputs/f
 
 ## Action Items
 
-- [ ] Create the GitHub repository and push these files.\n- [ ] Confirm or adjust task ownership in `docs/team_work_split.md`.
+- [x] Create the GitHub repository and push these files.\n- [ ] Confirm or adjust task ownership in `docs/team_work_split.md`.
 - [ ] Confirm the course-approved dataset version and record the download/access date.
-- [ ] Run `python src/analyze.py` and inspect all generated tables and figures.
+- [x] Run `python src/analyze.py` and inspect all generated tables and figures.
 - [ ] Review potentially erroneous years and document any justified exclusions before final results.
 - [ ] Check the `Fell`/`Found` categories and missing values in the downloaded file.
 - [ ] Review RQ1’s extreme mass values and discuss the limits of mean-based comparisons.
