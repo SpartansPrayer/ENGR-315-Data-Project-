@@ -110,6 +110,7 @@ def save_figure(filename: str) -> None:
     FIGURE_DIR.mkdir(parents=True, exist_ok=True)
     plt.tight_layout()
     plt.savefig(FIGURE_DIR / filename, dpi=180, bbox_inches="tight")
+    plt.show()
     plt.close()
 
 
