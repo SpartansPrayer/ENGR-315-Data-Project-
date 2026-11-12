@@ -169,13 +169,91 @@ The script creates CSV tables in `outputs/tables/` and PNG figures in `outputs/f
 
 ## Results (Answers to the Questions)
 
-> **Phase 2 placeholder:** This section will be opulated after running the script and validating the output. 
+> ## Phase 2: Results and Statistical Analysis
 
-- RQ1 results: pending analysis.
-- RQ2 results: pending analysis.
-- RQ3 results: pending analysis.
+### Research Question 1: Does Average Meteorite Mass Differ Between Observed Falls and Found Meteorites?
 
-## Conclusions
+To determine whether meteorite mass differs between observed falls (`Fell`) and meteorites discovered after landing (`Found`), we conducted a Welch two-sample t-test using a significance level of α = 0.05.
+
+#### Results
+
+| Metric | Fell | Found |
+|---|---:|---:|
+| Sample size | 1,075 | 44,491 |
+| Mean mass (g) | 47,070.72 | 12,467.24 |
+
+The mean mass difference (`Fell - Found`) was **34,603.47 grams**. However, the 95% confidence interval for this difference ranged from **-8,636.26 g to 77,843.20 g**.
+
+| Statistical measure | Result |
+|---|---:|
+| Welch t-statistic | 1.5702 |
+| Degrees of freedom | 1,107.18 |
+| p-value | 0.11665 |
+| Significance level (α) | 0.05 |
+| Statistically significant? | No |
+
+#### Interpretation
+
+Although the average recorded mass of meteorites classified as `Fell` was greater than that of meteorites classified as `Found`, the difference was not statistically significant (p = 0.11665). Because the p-value exceeds the 0.05 significance threshold and the confidence interval includes zero, we fail to reject the null hypothesis.
+
+**Conclusion:** We did not find sufficient statistical evidence that average meteorite mass differs between observed falls and found meteorites.
+
+---
+
+### Research Question 2: Is There a Statistically Significant Relationship Between Recorded Year and Meteorite Mass?
+
+We examined the relationship between the recorded year of a meteorite's fall or discovery and its recorded mass. The analysis included **45,291 observations** and used Pearson and Spearman correlation tests.
+
+#### Results
+
+| Statistical measure | Result |
+|---|---:|
+| Sample size | 45,291 |
+| Pearson correlation (r) | -0.12087 |
+| Approximate 95% CI for Pearson r | [-0.12994, -0.11179] |
+| Pearson p-value | 5.57 × 10⁻¹⁴⁷ |
+| Spearman correlation (ρ) | -0.00097 |
+| Spearman p-value | 0.83728 |
+| Significance level (α) | 0.05 |
+
+#### Interpretation
+
+The Pearson correlation indicates a weak negative linear relationship between recorded year and meteorite mass (r = -0.12087). This relationship was statistically significant, with a p-value substantially below 0.05.
+
+However, the Spearman correlation was approximately zero (ρ = -0.00097) and was not statistically significant (p = 0.83728).
+
+These results suggest that the relationship detected by Pearson correlation is weak and may not represent a consistent monotonic relationship across the data. The large sample size also means that even a relatively small correlation can produce a very small p-value.
+
+**Conclusion:** Pearson correlation identified a statistically significant but weak negative linear association between recorded year and meteorite mass. Spearman correlation did not identify a significant monotonic association. Therefore, the evidence for a meaningful general relationship between year and mass is limited.
+
+---
+
+### Research Question 3: Has the Number of Meteorites Classified as Fell Changed Significantly Over Time?
+
+To investigate temporal patterns in recorded meteorite falls, we analyzed annual counts of meteorites classified as `Fell` from 860 through 2013. A Poisson regression model was initially considered, but the observed dispersion exceeded the threshold of 1.5. Therefore, a negative binomial generalized linear model was used to account for overdispersion.
+
+#### Results
+
+| Statistical measure | Result |
+|---|---:|
+| Model used | Negative binomial GLM |
+| Number of years analyzed | 1,154 |
+| First recorded year | 860 |
+| Last recorded year | 2013 |
+| Poisson Pearson dispersion | 10.4656 |
+| Year coefficient | 0.011985 |
+| Incidence rate ratio (IRR) per year | 1.01206 |
+| 95% CI for IRR | [1.01097, 1.01315] |
+| p-value for year trend | 2.43 × 10⁻¹⁰⁵ |
+| Significance level (α) | 0.05 |
+
+#### Interpretation
+
+The negative binomial regression identified a statistically significant positive temporal trend in recorded `Fell` counts (p = 2.43 × 10⁻¹⁰⁵).
+
+The incidence rate ratio of 1.01206 indicates that the expected recorded count increased by approximately **1.21% per year**, according to the fitted model.
+
+### Conclusions
 
 > **Placeholder for a later phase.** Evidence for each research question, limitations, and what the results do and do not support will be summarized here.
 
