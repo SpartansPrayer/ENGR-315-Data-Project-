@@ -216,6 +216,8 @@ We examined the relationship between the recorded year of a meteorite's fall or 
 | Spearman p-value | 0.83728 |
 | Significance level (α) | 0.05 |
 
+![Figure 1 - Year vs Mass](rq2_year_vs_mass.png)
+
 #### Interpretation
 
 The Pearson correlation indicates a weak negative linear relationship between recorded year and meteorite mass (r = -0.12087). This relationship was statistically significant, with a p-value substantially below 0.05.
@@ -246,6 +248,8 @@ To investigate temporal patterns in recorded meteorite falls, we analyzed annual
 | 95% CI for IRR | [1.01097, 1.01315] |
 | p-value for year trend | 2.43 × 10⁻¹⁰⁵ |
 | Significance level (α) | 0.05 |
+
+![Figure 2 - Annual Fell Counts](rq3_annual_fell_counts.png)
 
 #### Interpretation
 
